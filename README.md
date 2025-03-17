@@ -1,8 +1,12 @@
-# This repository include source data files for mt-opto-IDR paper
-## Scripts folder
-Python scripts used for analysis
+# This repository includes source data files for mt-opto-IDR paper
 
 ## Figures folder
 Figures and raw data
 
-Edited: 20250316
+## Scripts folder
+Python scripts used for analysis
+
+## Video folder
+Videos for the paper
+
+Edited: 20250317
