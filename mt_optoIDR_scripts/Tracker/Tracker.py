@@ -306,7 +306,7 @@ def singleVanHovePlots(lagTData, trackID, lagT, nbins):
     plt.show()
 
     
-    return 
+    return None
     
 
     
