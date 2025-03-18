@@ -1,4 +1,4 @@
-### Tracking droplets Sanjaya AG 20241106 2.51 AM :) ###
+### Tracking droplets Sanjaya AG 20241106 
 import czifile as czifile
 import matplotlib.pyplot as plt
 import trackpy as tp
