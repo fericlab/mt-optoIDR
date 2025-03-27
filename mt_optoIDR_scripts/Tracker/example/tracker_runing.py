@@ -23,14 +23,14 @@ for i in range(len(files)):
     file=files[i]
     Linked_tracks = tr.tackdroplets(file=rf'{file}',
                                  filetype='CZI', #file type CZI or TIF
-                                 start_frame=0, 
-                                 end_frame=100, 
+                                 start_frame=0, #start frame you want
+                                 end_frame=100, #end frame you want
                                  channel=1, # 0 is the first channel
                                  p_threshold=95, #to identify the puncta by trackpy 1-100%
                                  search_range=20, #for trackpy linking fuction
                                  memory=5, #memory is the frames that can be skipped 0=no skipping
                                  imaging_interval=2, #in sec
-                                 annotate=True,
+                                 annotate=True, #show the tracking process or not
                                  filter_threshold=10, #filter if it can not be tracked at least this amount of frames
                                  correct_drift=False) #correct drifts !Warning be careful with the dift correction with dynamic systems!
 
