@@ -1,5 +1,5 @@
 # mt_optoIDR_scripts
-## Droplets 1.0
+## Droplet 1.0
 
 ## Orientation_finder
 This sript calculate the orientation between mitochondrial axial axis and droplet major axis
