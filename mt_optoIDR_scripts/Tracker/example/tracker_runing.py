@@ -4,7 +4,7 @@ import pandas as pd
 import itertools
 
 #STEP 1: TRACKING
-###### For each file run track droplets and individual tracks ##########
+###### For each file run track droplets ##########
 path=r'C:\Users\sanja\OneDrive - The Pennsylvania State University\Research\Data_Analysis\PlayGround\Tracker_example'
 
 
