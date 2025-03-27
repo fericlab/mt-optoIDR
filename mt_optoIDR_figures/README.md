@@ -1,2 +1,2 @@
 # mt_optoIDR_figures 
-This repository contains source files for main figures and supplementary figures 
+This directory contains raw data, RGB image files, and source data for the main figures and extended data figures
