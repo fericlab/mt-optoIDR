@@ -1,8 +1,10 @@
 # mt_optoIDR_scripts
+## Droplets 1.0
+
 ## Orientation_finder
 This sript calculate the orientation between mitochondrial axial axis and droplet major axis
 
-## Tracker.py 
+## Tracker
 This script contain  
 -tracking functions,  
 -function to isolate individual tracks,   
