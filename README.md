@@ -1,12 +1,12 @@
 # This repository includes source data files for mt-opto-IDR paper
 
 ## Figures folder
-Figures and raw data
+This directory contains raw data, RGB image files, and source data for the main figures and extended data figures
 
 ## Scripts folder
-Python scripts used for analysis
+This directory contains Python scripts used for the main analysis. Scripts used for plotting and data visualization can be found in the relevant directory under figures 
 
 ## Video folder
-Videos for the paper
+This directory contains supplementary video files
 
-Edited: 20250317
+
