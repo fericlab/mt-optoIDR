@@ -1,6 +1,6 @@
 # mt_optoIDR_scripts
 
-##Tracker 
+## Tracker.py 
 This script contain  
 -tracking functions,  
 -function to isolate individual tracks,   
