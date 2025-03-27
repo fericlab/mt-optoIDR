@@ -7,7 +7,7 @@
 4. Adjust other tracking parameters based on your imaging data.  
 
 # Output
-trackingData.csv : contain calculated dx and dy data and appropriate lag times based on other parameters assigned (ex. xAlined is True or False)
-1st_track_data_xAlined.csv : an example data set for the first track isolated 
+trackingData.csv : contain calculated dx and dy data and appropriate lag times based on other parameters assigned (ex. xAlined is True or False)   
+1st_track_data_xAlined.csv : an example data set for the first track isolated   
 
 All the other data can be extracted from saved lists.
