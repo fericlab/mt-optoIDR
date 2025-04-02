@@ -47,8 +47,17 @@
     Returns
     -------
     xAlined_tracks :    -[DataFrame] dataframe with xAlined coordinates
-## 
+## lagTData parameters  
+    Parameters
+    ----------
+    tracks_list :     -[list] list with individual tracks rotated (xAlined)
+    xAlined :           -[bool] if True , it will use xAlined x and y coordinates, False, use original coordinates
+    mpp :           -[float] microns per pixes
 
+    Returns
+    -------
+    lagTData :      -[DataFrame] conatin dx, dy and corresponsing ladtime
+      
 
 # Output
     trackingData.csv :  contain calculated dx and dy data and appropriate lag times based on other parameters assigned (ex. xAlined is True or False)   
