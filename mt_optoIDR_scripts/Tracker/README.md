@@ -6,6 +6,42 @@
 3. In tracker_runing.py, change the file path to the same directory 
 4. Adjust other tracking parameters based on your imaging data.  
 
+## trackdroplets function Parameters 
+        
+    Parameters
+    ----------
+    file :              -[file or file like object] czi file or a TIF file
+    filetype :          -[str] file type 'CZI' or 'TIF' 
+    start_frame :       -[int] first frame number, first frame is 0
+    end_frame :         -[int] end frame number
+    channel :           -[int] channel number, first channel is 0        
+    p_threshold :       -[float] precentile threshold to isolate puncta by trackpy 0-100%, higher the value more specific
+    search_range:       -[float or tuple] search range for linking   
+    memory :            -[int] memory is the frames that can be skipped 0=no skipping     
+    imaging_interval :  -[int] imaging intervals in secounds     
+    annotate :          -[bool] True if you want to see the droplets identified      
+    filter_threshold :  -[int] filter if it can not be tracked at least this amount of frames    
+    correct_drift :     -[bool] True if drift correct on
+        
+
+    Returns
+    -------
+    DataFrame
+        Data frame with linked puncta
+## individualTracks parameters 
+
+    Parameters
+        ----------
+        df_linked :     -[DataFrame] linked dataframe from trackdroplets function
+    
+            
+        Returns
+        -------
+        tracks_list :   -[DataFrame] A list of individual tracks 
+
+
+
+
 # Output
     trackingData.csv :  contain calculated dx and dy data and appropriate lag times based on other parameters assigned (ex. xAlined is True or False)   
     1st_track_data_xAlined.csv :  an example data set for the first track isolated   
