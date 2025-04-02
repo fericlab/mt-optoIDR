@@ -29,17 +29,25 @@
     DataFrame
         Data frame with linked puncta
 ## individualTracks parameters 
-
     Parameters
-        ----------
-        df_linked :     -[DataFrame] linked dataframe from trackdroplets function
+    ----------
+    df_linked :     -[DataFrame] linked dataframe from trackdroplets function
     
             
-        Returns
-        -------
-        tracks_list :   -[DataFrame] A list of individual tracks 
+    Returns
+    -------
+    tracks_list :   -[DataFrame] A list of individual tracks 
 
-
+## RotateTracks parameters
+    Parameters
+    ----------
+    tracks :        -[list] isolated track list from individualTracks       
+    plotting :      -[bool] True if you want to see the rotated track
+               
+    Returns
+    -------
+    xAlined_tracks :    -[DataFrame] dataframe with xAlined coordinates
+## 
 
 
 # Output
