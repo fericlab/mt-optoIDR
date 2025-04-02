@@ -125,7 +125,7 @@ def mitoOrientation(folder, tdf):
 
 
 
-################ Plotting puncta - Surya##################################
+################ Plotting puncta ##################################
 
 
 def punctaPlotter(i, fim, tdf, tslopes, talignment, r2):
@@ -164,7 +164,7 @@ def punctaPlotter(i, fim, tdf, tslopes, talignment, r2):
         return
 
 
-############################ Runing above functions ##############################
+############################ Running above functions ##############################
 
 pwd=r'C:\Users\sanja\OneDrive - The Pennsylvania State University\Research\Data_Analysis\Size_analysis\Size_partitonCoeff_AspectRatio\All_cells\data'
 
@@ -214,7 +214,7 @@ plt.show()
 
 
 
-################ Plotting polar histogram - Sanjaya############################
+################ Plotting polar histogram ############################
 
 #plot design parameters
 font_properties = {
