@@ -57,7 +57,36 @@
     Returns
     -------
     lagTData :      -[DataFrame] conatin dx, dy and corresponsing ladtime
-      
+
+## singleVanHovePlots parameters
+    Parameters
+    ----------
+    lagTData :  -[DataFrame] data frame from lagTData function
+    trackID :   -[str] ID of the track ex. track '00' (00 = particle number + file number)
+    lagT :     -[int] possible lag time in sec
+    nbins :     -[int] number of bins 
+   
+    Returns
+    -------
+    None. Only for visulaization propose. 
+
+## dataPool_vanHoverPlot
+    Parameters
+    ----------
+    lagdata :       -[DataFrame] data frame from lagTData function
+    lagT :          -[int] possible lag time in sec
+    dimention :     -[str] 'x' , 'y', or 'xy'
+    nbins :         -[int] number of bins 
+       
+
+    Returns
+    -------
+    d_total :       -[list] raw distance values  
+    bin_centers :   -[array] bin centers of the histogram (density = True, with normalized probability in y)
+    counts :        -[array] normalized probability since density = True.
+
+
+## 
 
 # Output
     trackingData.csv :  contain calculated dx and dy data and appropriate lag times based on other parameters assigned (ex. xAlined is True or False)   
