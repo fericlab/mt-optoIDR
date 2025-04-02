@@ -6,7 +6,7 @@
 3. In tracker_runing.py, change the file path to the same directory 
 4. Adjust other tracking parameters based on your imaging data.  
 
-## trackdroplets function Parameters 
+## trackdroplets Parameters 
         
     Parameters
     ----------
