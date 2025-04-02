@@ -28,7 +28,7 @@
     -------
     DataFrame
         Data frame with linked puncta
-## individualTracks parameters 
+## individualTracks Parameters 
     Parameters
     ----------
     df_linked :     -[DataFrame] linked dataframe from trackdroplets function
@@ -38,7 +38,7 @@
     -------
     tracks_list :   -[DataFrame] A list of individual tracks 
 
-## RotateTracks parameters
+## RotateTracks Parameters
     Parameters
     ----------
     tracks :         -[list] isolated track list from individualTracks       
@@ -47,7 +47,7 @@
     Returns
     -------
     xAlined_tracks :      -[DataFrame] dataframe with xAlined coordinates
-## lagTData parameters  
+## lagTData Parameters  
     Parameters
     ----------
     tracks_list :     -[list] list with individual tracks rotated (xAlined)
@@ -58,7 +58,7 @@
     -------
     lagTData :        -[DataFrame] conatin dx, dy and corresponsing ladtime
 
-## singleVanHovePlots parameters
+## singleVanHovePlots Parameters
     Parameters
     ----------
     lagTData :      -[DataFrame] data frame from lagTData function
@@ -70,7 +70,7 @@
     -------
     None. Only for visulaization propose. 
 
-## dataPool_vanHoverPlot parameters
+## dataPool_vanHoverPlot Parameters
     Parameters
     ----------
     lagdata :       -[DataFrame] data frame from lagTData function
@@ -86,7 +86,7 @@
     counts :        -[array] normalized probability since density = True.
 
 
-## MSD_cal parameters 
+## MSD_cal Parameters 
     Parameters
     ----------
     lagttracks :        -[list] list of calculated lag ts from lagtData function 
