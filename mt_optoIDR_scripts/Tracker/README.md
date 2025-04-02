@@ -70,7 +70,7 @@
     -------
     None. Only for visulaization propose. 
 
-## dataPool_vanHoverPlot
+## dataPool_vanHoverPlot parameters
     Parameters
     ----------
     lagdata :       -[DataFrame] data frame from lagTData function
@@ -86,7 +86,19 @@
     counts :        -[array] normalized probability since density = True.
 
 
-## 
+## MSD_cal parameters 
+    Parameters
+    ----------
+    lagttracks :        -[list] list of calculated lag ts from lagtData function 
+    msd_dimention :     -[str] 'x' , 'y', or 'xy'
+    ref_graph :         -[bool] if True plots slope = 1 graph
+        
+    
+    Returns
+    -------
+    MSD_data 
+
+
 
 # Output
     trackingData.csv :  contain calculated dx and dy data and appropriate lag times based on other parameters assigned (ex. xAlined is True or False)   
