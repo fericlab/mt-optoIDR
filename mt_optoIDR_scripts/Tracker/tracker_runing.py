@@ -5,7 +5,7 @@ import itertools
 
 #STEP 1: TRACKING
 ###### For each file run track droplets and individual tracks ##########
-path=r'C:\Users\sanja\OneDrive - The Pennsylvania State University\Research\Data_Analysis\PlayGround\Tracker_example'
+path=r'C:\Users\sanja\OneDrive - The Pennsylvania State University\Research\paper#1\mt_optoIDR_GitHub\mt-opto-IDR\mt_optoIDR_scripts\Tracker\example'
 
 
 All_tracks =[]
@@ -75,8 +75,8 @@ combined.to_csv('trackingData.csv', index=False)
 track1_data_xAlined  = xAlined[0].to_csv('1st_track_data_xAlined.csv', index=False) 
 
 
-
-
+#single vanHove plot for track '00' (00 = particle number+file number)
+tr.singleVanHovePlots(lagTData=All_lagtdata, trackID='00', lagT=2, nbins=10)
 
 
 

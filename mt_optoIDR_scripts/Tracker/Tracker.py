@@ -1,4 +1,3 @@
-### Tracking droplets Sanjaya AG 20241106 
 import czifile as czifile
 import matplotlib.pyplot as plt
 import trackpy as tp
@@ -9,7 +8,29 @@ from scipy.stats import linregress
 import tifffile
 
 def tackdroplets(file, filetype, start_frame, end_frame, channel, p_threshold, search_range, memory, imaging_interval, annotate, filter_threshold, correct_drift):
-    
+    '''
+    Parameters
+    ----------
+    file :              -[file or file like object] czi file or a TIF file
+    filetype :          -[str] file type 'CZI' or 'TIF' 
+    start_frame :       -[int] first frame number, first frame is 0
+    end_frame :         -[int] end frame number
+    channel :           -[int] channel number , first channel is 0        
+    p_threshold :       -[float] precentile threshold to isolate puncta by trackpy 0-100%, higher the value more specific
+    search_range:       -[float or tuple] search range for linking   
+    memory :            -[int] memory is the frames that can be skipped 0=no skipping     
+    imaging_interval :  -[int] imaging intervals in secounds     
+    annotate :          -[bool] True if you want to see the droplets identified      
+    filter_threshold :  -[int] filter if it can not be tracked at least this amount of frames    
+    correct_drift :     -[bool] True if drift correct on
+        
+
+    Returns
+    -------
+    DataFrame
+        Data frame with linked puncta
+
+    '''
     
     #THIS FUNCTION TRACK DROPLETS AND LINK THEM THEN CORRECT FOR ANY DRIFTS 
     
@@ -114,13 +135,12 @@ def individualTracks(df_linked):
     '''
     Parameters
     ----------
-    df_linked : TYPE
-        DESCRIPTION. Data frame retures from 'trackdroplet' function.
+    df_linked :     -[DataFrame] linked dataframe from trackdroplets function
+        
 
     Returns
     -------
-    tracks_list : Dataframe
-        DESCRIPTION. A list of individual tracks 
+    tracks_list :   -[DataFrame] A list of individual tracks 
 
     '''
     droplets_list = df_linked['particle'].unique() #get unique IDs
@@ -135,6 +155,22 @@ def individualTracks(df_linked):
 
 # Rotate each track parallel to the x axis 
 def RotateTracks(tracks, plotting):
+    '''
+
+    Parameters
+    ----------
+    tracks :        -[list] isolated track list from individualTracks
+       
+    plotting :      -[bool] True if you want to see the rotated track
+       
+
+    Returns
+    -------
+    xAlined_tracks :    -[DataFrame] dataframe with xAlined coordinates
+      
+    '''
+    
+    
     print('Runing xAline....')
     xAlined_tracks=[]
     
@@ -216,6 +252,20 @@ def RotateTracks(tracks, plotting):
 ################ Extracting dx, dy and lagT data ############
 #Need a dataframe with lag time, dx and dy
 def lagTData(tracks_list, xAlined, mpp):
+    '''
+    Parameters
+    ----------
+    tracks_list :     -[list] list with individual tracks rotated (xAlined)
+    xAlined :           -[bool] if True , it will use xAlined x and y coordinates, False, use original coordinates
+    mpp :           -[float] microns per pixes
+
+    Returns
+    -------
+    lagTData :      -[DataFrame] conatin dx, dy and corresponsing ladtime
+      
+
+    '''
+    
     #THIS FUNCTION GETS dX, dY FOR EACH POSSIBLE lag_time (dt). 
     #RETURN A LIST FOR EACH TRACK 
     print('Runing lagT...')
@@ -276,8 +326,29 @@ def lagTData(tracks_list, xAlined, mpp):
 ################################################### van Hover Plots ###############################
 
 def singleVanHovePlots(lagTData, trackID, lagT, nbins):
-    #extract data from the lagTData funciton 
-    data = lagTData[trackID]
+    '''
+
+    Parameters
+    ----------
+    lagTData :  -[DataFrame] data frame from lagTData function
+    trackID :   -[str] ID of the track ex. track '00' (00 = particle number + file number)
+    lagT :     -[int] possible lag time in sec
+    nbins :     -[int] number of bins 
+   
+    Returns
+    -------
+    None. Only for visulaization proupose. 
+
+    '''
+    
+    #create a track ID
+    alllagtData = pd.concat(lagTData, ignore_index=True)
+    alllagtData['ID']=alllagtData['file number'].astype(str) + alllagtData['particle'].astype(str)
+    
+   
+    #extract data from the lagTData  
+    data = alllagtData[alllagtData['ID']==trackID]
+   
     #isolate data for a given lagt
     data_for_lagt = data[data['dt']==lagT]
     
@@ -325,6 +396,24 @@ def singleVanHovePlots(lagTData, trackID, lagT, nbins):
     
 ############################## Polling all the lag T data together ##############
 def dataPool_vanHoverPlot(lagdata, lagT, dimention, nbins):
+    '''
+
+    Parameters
+    ----------
+    lagdata :       -[DataFrame] data frame from lagTData function
+    lagT :          -[int] possible lag time in sec
+    dimention :     -[str] 'x' , 'y', or 'xy'
+    nbins :         -[int] number of bins 
+       
+
+    Returns
+    -------
+    d_total :       -[list] raw distance values  
+    bin_centers :   -[array] bin centers of the histogram (density = True, with normalized probability in y)
+    counts :        -[array] normalized probability since density = True.
+    
+
+    '''
     
     # this function pool all the data from the dimention you want
     
@@ -391,6 +480,21 @@ def dataPool_vanHoverPlot(lagdata, lagT, dimention, nbins):
 ########### Calculating MSD values #############################
 
 def MSD_cal(lagttracks, msd_dimention, ref_graph): 
+    '''
+
+    Parameters
+    ----------
+    lagttracks :        -[list] list of calculated lag ts from lagtData function 
+    msd_dimention :     -[str] 'x' , 'y', or 'xy'
+    ref_graph :         -[bool] if True plots slope = 1 graph
+        
+    
+    Returns
+    -------
+    MSD_data 
+
+    '''
+    
     #get all the lag t data to a one dataframe
     combined_lagtdata = pd.concat(lagttracks, ignore_index=True)
     
@@ -437,7 +541,4 @@ def MSD_cal(lagttracks, msd_dimention, ref_graph):
 
 
 
-    
-
-    
     
