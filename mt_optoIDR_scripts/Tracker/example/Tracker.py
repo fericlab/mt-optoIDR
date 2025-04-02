@@ -1,4 +1,4 @@
-### Tracking droplets Sanjaya AG 20241106 
+### Tracking droplets 
 import czifile as czifile
 import matplotlib.pyplot as plt
 import trackpy as tp
@@ -11,7 +11,7 @@ import tifffile
 def tackdroplets(file, filetype, start_frame, end_frame, channel, p_threshold, search_range, memory, imaging_interval, annotate, filter_threshold, correct_drift):
     
     
-    #THIS FUNCTION TRACK DROPLETS AND LINK THEM THEN CORRECT FOR ANY DRIFTS 
+    #THIS FUNCTION TRACKS DROPLETS AND LINKS THEM THEN CORRECTS FOR ANY DRIFTS 
     
     #import the the file 
     if filetype == 'TIF':
