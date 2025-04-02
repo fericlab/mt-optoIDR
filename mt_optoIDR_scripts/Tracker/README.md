@@ -41,30 +41,30 @@
 ## RotateTracks parameters
     Parameters
     ----------
-    tracks :        -[list] isolated track list from individualTracks       
-    plotting :      -[bool] True if you want to see the rotated track
+    tracks :         -[list] isolated track list from individualTracks       
+    plotting :       -[bool] True if you want to see the rotated track
                
     Returns
     -------
-    xAlined_tracks :    -[DataFrame] dataframe with xAlined coordinates
+    xAlined_tracks :      -[DataFrame] dataframe with xAlined coordinates
 ## lagTData parameters  
     Parameters
     ----------
     tracks_list :     -[list] list with individual tracks rotated (xAlined)
-    xAlined :           -[bool] if True , it will use xAlined x and y coordinates, False, use original coordinates
-    mpp :           -[float] microns per pixes
+    xAlined :         -[bool] if True , it will use xAlined x and y coordinates, False, use original coordinates
+    mpp :             -[float] microns per pixes
 
     Returns
     -------
-    lagTData :      -[DataFrame] conatin dx, dy and corresponsing ladtime
+    lagTData :        -[DataFrame] conatin dx, dy and corresponsing ladtime
 
 ## singleVanHovePlots parameters
     Parameters
     ----------
-    lagTData :  -[DataFrame] data frame from lagTData function
-    trackID :   -[str] ID of the track ex. track '00' (00 = particle number + file number)
-    lagT :     -[int] possible lag time in sec
-    nbins :     -[int] number of bins 
+    lagTData :      -[DataFrame] data frame from lagTData function
+    trackID :       -[str] ID of the track ex. track '00' (00 = particle number + file number)
+    lagT :          -[int] possible lag time in sec
+    nbins :         -[int] number of bins 
    
     Returns
     -------
