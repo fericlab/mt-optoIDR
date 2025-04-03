@@ -1,10 +1,15 @@
-# How to use Tracker for tracking droplets in mitochondria? 
+# How to use Tracker for tracking droplets in mitochondria
 
-# How to use Tracker.py
-1. Download the Tracker.py and tracker_runing.py   
-2. Keep your .czi to .tiff file in the same folder   
-3. In tracker_runing.py, change the file path to the same directory 
-4. Adjust other tracking parameters based on your imaging data.  
+# Requirements 
+## Install necessary dependencies 
+    pip install czifile
+    pip install trackpy
+
+# Guide
+    1. Download the Tracker.py and tracker_runing.py   
+    2. Keep your .czi or .tiff files in the same folder   
+    3. In tracker_runing.py, change the file path to the same directory 
+    4. Adjust other tracking parameters based on your imaging data.  
 
 ## trackdroplets Parameters 
         
