@@ -1,5 +1,5 @@
 # mt_optoIDR_scripts
-## Droplet 1.0
+## Droplets 1.0
 Main scripts used to segment mt-opot-condensates from the mitochondrial network. 
 This script calculate,   
 * major and minor axis of segmented droplets (Full width at half max)   
@@ -11,7 +11,7 @@ and include all the x and y location details and other data calculated from the 
 ## Orientation finder
 * This script calculates the orientation between mitochondrial axial axis and droplet major axis
 
-## Tracker
+## Tracker 1.0
 This script contain  
 * tracking functions,  
 * function to isolate individual tracks,   
