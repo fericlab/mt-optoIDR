@@ -1,5 +1,5 @@
-# How to use Tracker for tracking droplets in mitochondria
 ![Static Badge](https://img.shields.io/badge/mt_drop_Tracker-1.0-green)
+# How to use Tracker for tracking droplets in mitochondria
 
 ## Requirements 
 ## Install necessary dependencies 
