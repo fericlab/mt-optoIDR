@@ -1,6 +1,9 @@
 # How to use Droplet_1.0 to segment mitochondrial droplets
 ## Requiremnts 
-1. Install necessary dependencies
+## Install necessary dependencies
+    pip install opencv-python
+    pip install czifile
+    pip install trackpy
 
 ## Running 
  Given an input file, size data and centroid estimates for an inputted threshold are returned. The program previews the image with the thresholded punctae and allows for modifications of the threshold on the fly.   
