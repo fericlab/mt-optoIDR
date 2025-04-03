@@ -9,7 +9,7 @@ and include all the x and y location details and other data calculated from the 
 
 
 ## Orientation finder
-This script calculates the orientation between mitochondrial axial axis and droplet major axis
+* This script calculates the orientation between mitochondrial axial axis and droplet major axis
 
 ## Tracker
 This script contain  
