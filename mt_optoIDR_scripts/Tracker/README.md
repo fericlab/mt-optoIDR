@@ -1,4 +1,4 @@
-# How to use mt_drop_Tracker for tracking droplets in mitochondria? 
+# How to use Tracker for tracking droplets in mitochondria? 
 
 # How to use Tracker.py
 1. Download the Tracker.py and tracker_runing.py   
