@@ -15,7 +15,7 @@ def mitoOrientation(folder, tdf):
     files = []
     images = []
     for i in range(len(f)):
-        if f[i].endswith('.czi'): # may be unnecesary, removes a hidden file #sanjaya
+        if f[i].endswith('.czi'): # may be unnecesary, removes a hidden file 
             files.append(folder + '/' + f[i])
         else:
             pass
@@ -110,6 +110,8 @@ def mitoOrientation(folder, tdf):
         tslopes.append(m)
         talignment.append(oDiff)
         
+        #############Filtering ########################
+        
         if (r2 >= 0.70) and (tdf['aspect ratio'][i]>1):  #############  Filtering 
             slopes.append(m)
             alignment.append(oDiff)
@@ -127,6 +129,10 @@ def mitoOrientation(folder, tdf):
 
 
 def punctaPlotter(i, fim, tdf, tslopes, talignment, r2):
+    
+        angle_deg= np.round((talignment[i])*57.2958, 3)
+        if np.isnan(angle_deg): 
+            return #exit the function, as we had a filter depending on the fit to mitohondrial skeleton 
     
         plt.figure()
         xset = np.linspace(0,22,200)
@@ -147,11 +153,14 @@ def punctaPlotter(i, fim, tdf, tslopes, talignment, r2):
 
         image = image[y-10:y+11, x-10:x+11]
         
+       
+        
         plt.ylim(20,0)
         plt.xlim(0,20)
         plt.xlabel('index = ' + str(i) + '   |   '+'r^2 = ' + str(r2[i]))
         #plt.title('white = droplet, orange = mito')
         angle_deg= np.round((talignment[i])*57.2958, 3)
+        print(angle_deg)
         plt.title(f'angle={angle_deg}°')
         #plt.annotate('Ang:' + str(np.round((talignment[i])*57.2958, 3))  + ' deg',(20,7))
         
@@ -190,8 +199,15 @@ slopes, alignment, tslopes, talignment, rsquared, fskele, images = mitoOrientati
 
 
 #######################look at some droplets####################### 
-for i in range(23):
-    punctaPlotter(i, images, l, tslopes, alignment, rsquared)
+for i in range(23):   
+    punctaPlotter(i=i, 
+                  fim = images, 
+                  tdf=l, 
+                  tslopes = tslopes, 
+                  talignment = alignment, 
+                  r2=rsquared)
+    
+    #punctaPlotter(i, images, l, tslopes, alignment, rsquared)
 
 
 plt.hist(alignment, bins=50)
@@ -246,7 +262,7 @@ ax.set_theta_offset((pi/2))
 
 N=len(data)
 precent = round((len(data)/len(alignment))*100 , 1)
-ax.set_title(f'Polar histogram of angles \n {precent}% of the time/data in this plot, N={N}')
+ax.set_title(f'Polar histogram of angles \n N={N}')
 
 ax.tick_params(axis='both', which='both', labelsize=14)
 
