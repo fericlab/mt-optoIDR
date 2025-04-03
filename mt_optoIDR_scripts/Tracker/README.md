@@ -1,6 +1,6 @@
 # How to use Tracker for tracking droplets in mitochondria
 
-# Requirements 
+## Requirements 
 ## Install necessary dependencies 
     pip install czifile
     pip install trackpy
