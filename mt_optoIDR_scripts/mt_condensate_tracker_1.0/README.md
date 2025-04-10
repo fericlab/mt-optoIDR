@@ -1,4 +1,4 @@
-![Static Badge](https://img.shields.io/badge/mt_drop_Tracker-1.0-green)
+![Static Badge](https://img.shields.io/badge/mt%20condensate%20tracker-%201.0-green)
 # How to use mt-condensate-tracker for tracking droplets in mitochondria
 
 ## Requirements 
