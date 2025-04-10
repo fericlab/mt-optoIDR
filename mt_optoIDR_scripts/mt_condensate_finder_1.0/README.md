@@ -1,5 +1,5 @@
 ![Static Badge](https://img.shields.io/badge/mt_Droplets-1.0-red)
-# How to use Droplet_1.0 to segment mitochondrial droplets
+# How to use mt_condensate_finder_1.0 to segment mitochondrial droplets
 
 ## Requiremnts 
 ## Install necessary dependencies
