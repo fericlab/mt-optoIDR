@@ -10,20 +10,23 @@
 ## Running 
  Given an input file, size data and centroid estimates for an inputted threshold are returned. The program previews the image with the thresholded punctae and allows for modifications of the threshold on the fly.   
 ## Inputs:   
-    # imagefile     - [directory] complete file directory of the input image. takes .czi files
-    # channel       - [int] channel index of .czi file
+    # folder        - [directory] complete directory of the input folder containing files to be run
     # p_to_mu       - [float] pixel to micron conversion ratio
-    # I_thr         - [float] initial threshold value. increase to make more specific and 
-    #                 decrease to gather more puncta
-    # back_i        - [float] estimate of the cytoplasmic background signal
-    # p_size        - [int] approximate radius (in pixels) of the puncta. Overestimate
-    # wndw          - [int] window size from the center to the size taken around each puncta, in pixels
-    # interactive   - [1/0] 1 means user output is not suppressed and 0 suppresses all
-##                 outputs
-    # Outputs:
-    # centroids     - returns the x and y coordinates of the centroid
-    # pixelAxis     - returns the major and minor axis lengths in pixels
-    # punctaAxis    - returns the major and minor axis lengths in microns
-    # aspectRatio   - returns the aspect ratio of the punctae
-    # threshold     - returns the final threshold value used for the image
+## Optional Inputs:
+    # All arrays can have either one value for each channel, or one element which will be applied to all channels
+    # timesteps     - [array of ints] an array containing the timesteps to be analyzed
+    # zstacks       - [array of ints] an array containing the zstacks to be analyzed
+    # channels      - [array of ints] an array the channel indices of czifile to be analyzed
+    # intensities   - [array of ints] an array of intensities per each channel
+    # backints      - [array of floats] estimate background noise outside of the mitochondrial network
+    # masksizes     - [array of ints] approximate radius (in pixels) of the puncta. Overestimate
+    # windowsizes   - [array of ints] window size from the center to the size taken around each puncta
+    # crop          - [xmin, xmax, ymin, ymax] array that crops the original image to the arrays values
+    # plot          - 'Suppress' if you want to suppress the display of the segmentation for each image trace
+## Outputs:
+    # totallist     - returns a dictionary of dictionaries that contain the puncta found in each image trace
+    # arraylistt    - returns a dictionary of dictionaries that contain the processed image of each puncta in each image trace
+    # imagelistt    - returns a dictionary of dictionaries that contain the raw image of each puncta in each image trace
+    # dframe        - returns a dataframe containing parameters for each puncta, only if the puncta were fit nicely 
+    # rawdframe     - returns a dataframe containing parameters for each puncta
     
