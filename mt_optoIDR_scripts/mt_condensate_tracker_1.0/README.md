@@ -1,4 +1,8 @@
 ![Static Badge](https://img.shields.io/badge/mt%20condensate%20tracker-%201.0-green)
+# Google Colab Notebook
+## For small use cases this Colab notebook can be used online. 
+Colab notebook: https://colab.research.google.com/drive/1gRTs2m3wxfmMMdcdIEnII3WE9LjAPDBf?usp=sharing 
+
 # How to use mt-condensate-tracker for tracking droplets in mitochondria
 
 ## Requirements 
