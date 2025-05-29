@@ -1,4 +1,7 @@
 ![Static Badge](https://img.shields.io/badge/mt%20condensate%20finder%20-%201.0-red)
+# Google Colab Notebook
+## This Colab notebook can be used online for single-file use cases. 
+Colab notebook: https://colab.research.google.com/drive/1gRTs2m3wxfmMMdcdIEnII3WE9LjAPDBf?usp=sharing
 # How to use mt_condensate_finder_1.0 to segment mitochondrial droplets
 
 ## Requiremnts 
