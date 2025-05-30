@@ -11,15 +11,15 @@ Colab notebook: https://colab.research.google.com/drive/1CA6p--1J2aRRl0ojWVuk6YV
     pip install trackpy
 
 ## Running 
- Given an input file, size data and centroid estimates for an inputted threshold are returned. The program previews the image with the thresholded punctae and allows for modifications of the threshold on the fly.   
+Given an input file, size data, and centroid estimates for an inputted threshold are returned. The program previews the image with the thresholded puncta and allows for modifications of the threshold on the fly.   
 ## Inputs:   
     # folder        - [directory] complete directory of the input folder containing files to be run
     # p_to_mu       - [float] pixel to micron conversion ratio
 ## Optional Inputs:
     # All arrays can have either one value for each channel, or one element which will be applied to all channels
-    # timesteps     - [array of ints] an array containing the timesteps to be analyzed
-    # zstacks       - [array of ints] an array containing the zstacks to be analyzed
-    # channels      - [array of ints] an array the channel indices of czifile to be analyzed
+    # timesteps     - [array of ints] an array containing the first timestep and the final timestep to be analyzed delimited by commas
+    # zstacks       - [array of ints] an array containing the first zstack and the final zstack to be analyzed delimited by commas
+    # channels      - [array of ints] an array the channel indices of the czifile to be analyzed
     # intensities   - [array of ints] an array of intensities per each channel
     # backints      - [array of floats] estimate background noise outside of the mitochondrial network
     # masksizes     - [array of ints] approximate radius (in pixels) of the puncta. Overestimate
