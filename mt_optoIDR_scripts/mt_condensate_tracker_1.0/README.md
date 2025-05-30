@@ -25,12 +25,12 @@ Colab notebook: https://colab.research.google.com/drive/1gRTs2m3wxfmMMdcdIEnII3W
     start_frame :       -[int] first frame number, first frame is 0
     end_frame :         -[int] end frame number
     channel :           -[int] channel number, first channel is 0        
-    p_threshold :       -[float] precentile threshold to isolate puncta by trackpy 0-100%, higher the value more specific
+    p_threshold :       -[float] precentile threshold to isolate puncta by trackpy. From 0-100%. Higher values are more specific
     search_range:       -[float or tuple] search range for linking   
-    memory :            -[int] memory is the frames that can be skipped 0=no skipping     
+    memory :            -[int] memory is the frames that can be skipped. 0 = no skipping     
     imaging_interval :  -[int] imaging intervals in secounds     
     annotate :          -[bool] True if you want to see the droplets identified      
-    filter_threshold :  -[int] filter if it can not be tracked at least this amount of frames    
+    filter_threshold :  -[int] only considers tracks that have been detected over a certain amount of frames   
     correct_drift :     -[bool] True if drift correct on
         
 
@@ -61,30 +61,30 @@ Colab notebook: https://colab.research.google.com/drive/1gRTs2m3wxfmMMdcdIEnII3W
     Parameters
     ----------
     tracks_list :     -[list] list with individual tracks rotated (xAlined)
-    xAlined :         -[bool] if True , it will use xAlined x and y coordinates, False, use original coordinates
-    mpp :             -[float] microns per pixes
+    xAlined :         -[bool] if True, it will use xAlined x and y coordinates. if False, it will use the original coordinates
+    mpp :             -[float] microns per pixel
 
     Returns
     -------
-    lagTData :        -[DataFrame] conatin dx, dy and corresponsing ladtime
+    lagTData :        -[DataFrame] conatin dx, dy, and corresponsing lagtime
 
 ## singleVanHovePlots Parameters
     Parameters
     ----------
     lagTData :      -[DataFrame] data frame from lagTData function
     trackID :       -[str] ID of the track ex. track '00' (00 = particle number + file number)
-    lagT :          -[int] possible lag time in sec
+    lagT :          -[int] possible lag time in seconds
     nbins :         -[int] number of bins 
    
     Returns
     -------
-    None. Only for visulaization propose. 
+    None. Only for visulaization purposes. 
 
 ## dataPool_vanHoverPlot Parameters
     Parameters
     ----------
     lagdata :       -[DataFrame] data frame from lagTData function
-    lagT :          -[int] possible lag time in sec
+    lagT :          -[int] possible lag time in seconds
     dimention :     -[str] 'x' , 'y', or 'xy'
     nbins :         -[int] number of bins 
        
@@ -111,7 +111,7 @@ Colab notebook: https://colab.research.google.com/drive/1gRTs2m3wxfmMMdcdIEnII3W
 
 
 # Output
-    trackingData.csv :  contain calculated dx and dy data and appropriate lag times based on other parameters assigned (ex. xAlined is True or False)   
-    1st_track_data_xAlined.csv :  an example data set for the first track isolated   
+    trackingData.csv :  contain calculated dx and dy data and appropriate lag times based on other assigned parameters (ex. xAlined is True or False)   
+    1st_track_data_xAlined.csv :  an example data set for the first isolated track   
 
 All the other data can be extracted from saved lists.
