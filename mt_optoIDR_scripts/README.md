@@ -4,8 +4,7 @@ Main scripts used to segment mt-opto-condensates from the mitochondrial network.
 This script calculates,   
 * Major and minor axis of segmented droplets (full width at half max)   
 * Aspect ratio of droplets   
-* Partition coefficients    
-and includes all the x and y location details and other data calculated from the trackpy locate function 
+* Partition coefficients and includes all the x and y location details and other data calculated from the trackpy locate function 
 
 
 ## Orientation finder
