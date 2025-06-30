@@ -1,4 +1,4 @@
-# This repository includes source data files for the mt-opto-IDR paper
+# This repository includes source data files for the mt-optoIDR paper
 
 ## mt_optoIDR_Figures folder
 This directory contains raw data, visualization scripts, RGB image files, and source data for the main figures and extended data figures
